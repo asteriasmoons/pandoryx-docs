@@ -28,3 +28,25 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Rounded button style for sidebar items */
+.theme-doc-sidebar-item-link a {
+  display: block;
+  padding: 8px 14px;
+  margin: 4px 0;
+  border-radius: 12px;
+  background-color: #2d3748; /* dark background */
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.theme-doc-sidebar-item-link a:hover {
+  background-color: #5831ce; /* slightly lighter on hover */
+  transform: translateY(-1px);
+}
+
+.theme-doc-sidebar-item-link a.active {
+  background-color: #5831ce; /* highlight active link */
+  color: #fff;
+}
