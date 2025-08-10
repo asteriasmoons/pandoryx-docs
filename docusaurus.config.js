@@ -52,10 +52,10 @@ const config = {
     ({
       image: "img/social-card.jpg",
       navbar: {
-        title: "Your Bot",
+        title: "Pandoryx",
         logo: {
           alt: "Your Bot Logo",
-          src: "img/logo.svg", // replace if you have a logo
+          src: "img/logo.jpg", // replace if you have a logo
         },
         items: [
           // Keep a Docs link (renamed from "Tutorial")
