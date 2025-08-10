@@ -1,6 +1,5 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * CSS modules are scoped to this page.
  */
 
 .heroBanner {
@@ -8,11 +7,19 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  /* subtle gradient + rounded container */
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-emphasis-300));
+  border-radius: 24px;
+  margin: 2rem auto;
+  max-width: 1180px;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+    margin: 1rem;
+    border-radius: 18px;
   }
 }
 
@@ -20,4 +27,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Pill CTA (primary) */
+.cta {
+  border-radius: 9999px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  background: var(--ifm-color-primary-darker);
+}
+
+/* Outline/secondary pill */
+.secondaryCta {
+  border-radius: 9999px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  border: 2px solid var(--ifm-color-emphasis-600);
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.secondaryCta:hover {
+  transform: translateY(-1px);
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-800);
 }
