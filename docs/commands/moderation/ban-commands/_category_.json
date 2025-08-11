@@ -1,0 +1,8 @@
+{
+  "label": "Bans",
+  "link": {
+    "type": "generated-index",
+    "description": "Ban-related commands."
+  },
+  "collapsed": true
+}

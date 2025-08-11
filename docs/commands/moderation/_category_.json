@@ -1,0 +1,8 @@
+{
+  "label": "Moderation",
+  "link": {
+    "type": "generated-index",
+    "description": "Moderation-related bot commands."
+  },
+  "collapsed": true
+}
