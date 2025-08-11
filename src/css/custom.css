@@ -16,6 +16,8 @@
 
   /* 🔵 Round both Next/Previous nav cards site-wide */
   --ifm-pagination-nav-border-radius: 20px;  /* ← added */
+
+  --ifm-button-border-radius: 9999px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -57,4 +59,32 @@
 .theme-doc-sidebar-item-link a.active {
   background-color: #5831ce; /* highlight active link */
   color: #fff;
+}
+
+/* your existing row is fine */
+.md-button-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+/* center the text/emoji inside each button */
+.md-button-row .button {
+  display: inline-flex;          /* instead of inline-block */
+  align-items: center;           /* vertical centering */
+  justify-content: center;       /* horizontal centering */
+  line-height: 1;                /* remove extra top/bottom slack */
+  padding: 0.6rem 1.2rem;        /* tweak to taste */
+  border-radius: 9999px;         /* pill (or keep your global var) */
+  font-weight: 600;
+}
+
+.btn-emoji {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  margin-right: 8px;   /* space between emoji and text */
+  font-size: 1.05em;   /* optional: nudge size */
 }
