@@ -12,7 +12,7 @@
   --ifm-color-primary-lighter: #5831ce;
   --ifm-color-primary-lightest: #5831ce;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(39, 39, 43, 0.1);
 
   /* 🔵 Round both Next/Previous nav cards site-wide */
   --ifm-pagination-nav-border-radius: 20px;  /* ← added */
@@ -29,7 +29,7 @@
   --ifm-color-primary-light: #5831ce;
   --ifm-color-primary-lighter: #5831ce;
   --ifm-color-primary-lightest: #5831ce;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(39, 39, 43, 0.1);
 
   /* (optional) repeat here if you want a different radius in dark mode
   --ifm-pagination-nav-border-radius: 14px;
