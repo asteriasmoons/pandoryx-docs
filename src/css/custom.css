@@ -81,10 +81,45 @@
   font-weight: 600;
 }
 
+/* Vertical stack, NOT stretched */
+.md-button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 1rem auto;
+}
+
+.md-button-column .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0.6rem 1.2rem;
+  width: auto;           /* ensure no full-width */
+  font-weight: 600;
+}
+
 .btn-emoji {
   display: inline-flex;
   align-items: center;
   line-height: 1;
   margin-right: 8px;   /* space between emoji and text */
   font-size: 1.05em;   /* optional: nudge size */
+}
+
+.md-divider {
+  border: 0;
+  height: 2px;
+  background: var(--ifm-color-emphasis-300);
+  margin: 2rem 0;
+  border-radius: 9999px; /* pill-ish line */
+}
+
+.md-divider-gradient {
+  border: 0;
+  height: 3px;
+  margin: 2rem 0;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, var(--ifm-color-primary), transparent);
 }
