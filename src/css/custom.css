@@ -123,3 +123,36 @@
   border-radius: 9999px;
   background: linear-gradient(90deg, transparent, var(--ifm-color-primary), transparent);
 }
+
+/* General table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden; /* makes border radius apply to table body */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Table headers */
+table thead {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+table th, table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  text-align: left;
+}
+
+/* Remove bottom border for last row */
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover effect */
+table tbody tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
