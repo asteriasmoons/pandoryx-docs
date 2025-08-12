@@ -103,7 +103,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Your Project. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Pandoryx Docs. Built with Docusaurus.`,
       },
 
       prism: {
