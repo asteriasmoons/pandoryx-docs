@@ -8,6 +8,7 @@
   text-align: center;
   position: relative;
   overflow: visible; /* allow the inner card to breathe */
+  background-color: #1b1b1d;
 }
 
 /* Rounded, centered gradient "panel" with blue → purple theme */
