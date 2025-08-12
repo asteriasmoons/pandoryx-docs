@@ -2,7 +2,7 @@
  * CSS modules are scoped to this page.
  */
 
-/* Centered hero; gradient card is handled by ::before */
+ /* Centered hero; gradient card is handled by ::before */
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -10,16 +10,20 @@
   overflow: visible; /* allow the inner card to breathe */
 }
 
-/* Rounded, centered gradient "panel" that doesn't break layout */
+/* Rounded, centered gradient "panel" with blue → purple theme */
 .heroBanner::before {
   content: '';
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
   max-width: 1180px;
   margin: 2rem auto;
-  border-radius: 24px;
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-emphasis-300));
+  border-radius: 9999px; /* full pill shape */
+  background: linear-gradient(135deg, #63c8ff, #6055f7); /* blue to purple */
   z-index: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
 }
 
 /* Keep the actual content above the gradient panel */
@@ -34,7 +38,7 @@
   }
   .heroBanner::before {
     margin: 1rem auto;
-    border-radius: 18px;
+    border-radius: 2rem; /* softer radius on mobile */
   }
 }
 
