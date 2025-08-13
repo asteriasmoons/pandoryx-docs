@@ -244,8 +244,18 @@ table tbody tr:hover {
   box-shadow: 0 10px 26px rgba(0,0,0,0.22);
 }
 
-/* Hide admonition headings (like "Tip", "Note", "Danger") */
+/* Hide admonition headings across theme variants */
+.admonition .admonitionHeading,
+.admonition [class*="admonitionHeading"],
 .alert .admonitionHeading,
-.alert .alert__heading {
+.alert [class*="admonitionHeading"],
+.alert__heading,
+[class*="alert__heading"] {
   display: none !important;
+}
+
+/* Optional: tighten top padding now that the heading is gone */
+.admonition,
+.alert {
+  padding-top: 0.85rem;
 }
