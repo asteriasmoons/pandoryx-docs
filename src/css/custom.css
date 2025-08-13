@@ -195,9 +195,13 @@ table tbody tr:hover {
   font-weight: 700;
 }
 
-/* Hide the default Docusaurus/Infima icon */
+/* Hide the default admonition icon across theme versions */
+.admonition .admonitionIcon,
+.admonition [class*="admonitionIcon"],
 .alert .admonitionIcon,
-.alert .alert__icon {
+.alert [class*="admonitionIcon"],
+.alert__icon,
+[class*="alert__icon"] {
   display: none !important;
 }
 
@@ -228,4 +232,21 @@ table tbody tr:hover {
     border-radius: 1.25rem;
     padding-left: 3rem;
   }
+}
+
+/* Headings: show normal case instead of ALL CAPS */
+.admonitionHeading,
+.alert__heading {
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+
+/* Tighter layout for multi-line callouts */
+.alert {
+  line-height: 1.35;
+}
+
+/* Hover subtle lift */
+.alert:hover {
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
 }
