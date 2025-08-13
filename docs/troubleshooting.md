@@ -44,10 +44,8 @@ If something seems broken or isn't working the way it should, please help us hel
 - Whether you’re an admin or testing with a lower role
 
 #### 💬 Please do not open a new issue.
-> Instead, comment on the pinned Bug Reports thread in the Issues tab.
-
 :::success
-The more details you give, the faster we can fix it. 🛠️
+Instead, comment on the pinned Bug Reports thread in the Issues tab. The more details you give, the faster we can fix it. 🛠️
 :::
 
 <hr className="md-divider-gradient" />
