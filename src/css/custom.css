@@ -254,5 +254,5 @@ table tbody tr:hover {
 /* Hide admonition headings (like "Tip", "Note", "Danger") */
 .alert .admonitionHeading,
 .alert .alert__heading {
-  display: none;
+  display: none !important;
 }
