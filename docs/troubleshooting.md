@@ -17,8 +17,9 @@ Running into issues? Here are a few quick things to check before reaching out fo
 <hr className="md-divider-gradient" />
 
 ### 🚫 Command Says "Missing Permissions"
-- Ensure Pandoryx has the required server-level permissions:
-  - Manage Roles, Manage Channels, Send Messages, Embed Links, etc.
+:::danger
+**Ensure Pandoryx has the required server-level permissions:** Manage Roles, Manage Channels, Send Messages, Embed Links, etc.
+:::
 
 If the command targets another user or role, make sure Pandoryx’s role is above the target in the role hierarchy.
 
@@ -44,7 +45,7 @@ If something seems broken or isn't working the way it should, please help us hel
 - Whether you’re an admin or testing with a lower role
 
 #### 💬 Please do not open a new issue.
-:::success
+:::danger
 Instead, comment on the pinned Bug Reports thread in the Issues tab. The more details you give, the faster we can fix it. 🛠️
 :::
 
