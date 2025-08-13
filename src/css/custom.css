@@ -234,13 +234,6 @@ table tbody tr:hover {
   }
 }
 
-/* Headings: show normal case instead of ALL CAPS */
-.admonitionHeading,
-.alert__heading {
-  text-transform: none;
-  letter-spacing: 0.2px;
-}
-
 /* Tighter layout for multi-line callouts */
 .alert {
   line-height: 1.35;
