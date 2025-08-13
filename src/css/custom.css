@@ -219,12 +219,12 @@ table tbody tr:hover {
   filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25));
 }
 
-/* Map types → your SVGs */
-.alert--tip::before       { background-image: url("/img/icons/tip.svg"); }
-.alert--note::before      { background-image: url("/img/icons/note.svg"); }
-.alert--important::before { background-image: url("/img/icons/important.svg"); }
-.alert--caution::before   { background-image: url("/img/icons/caution.svg"); }
-.alert--danger::before    { background-image: url("/img/icons/danger.svg"); }
+/* Use higher specificity + !important to beat theme */
+.alert.alert--tip::before       { background-image: url("/img/icons/tip.svg") !important; }
+.alert.alert--note::before      { background-image: url("/img/icons/note.svg") !important; }
+.alert.alert--important::before { background-image: url("/img/icons/important.svg") !important; }
+.alert.alert--caution::before   { background-image: url("/img/icons/caution.svg") !important; }
+.alert.alert--danger::before    { background-image: url("/img/icons/danger.svg") !important; }
 
 /* Optional: slightly smaller pill on narrow screens */
 @media (max-width: 600px) {
