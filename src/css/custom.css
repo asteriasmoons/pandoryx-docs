@@ -187,14 +187,6 @@ table tbody tr:hover {
   border: none;
 }
 
-/* Headings within admonitions */
-.alert .admonitionHeading,
-.alert .alert__heading {
-  color: #fff;
-  margin-top: 0;
-  font-weight: 700;
-}
-
 /* Hide the default admonition icon across theme versions */
 .admonition .admonitionIcon,
 .admonition [class*="admonitionIcon"],
