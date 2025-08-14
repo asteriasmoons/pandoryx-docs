@@ -215,7 +215,7 @@ table tbody tr:hover {
 .alert.alert--success::before       { background-image: url("/img/icons/tip.svg") !important; }
 .alert.alert--secondary::before      { background-image: url("/img/icons/note.svg") !important; }
 .alert.alert--important::before { background-image: url("/img/icons/important.svg") !important; }
-.alert.alert--caution::before   { background-image: url("/img/icons/caution.svg") !important; }
+.alert.alert--warning::before   { background-image: url("/img/icons/caution.svg") !important; }
 .alert.alert--danger::before    { background-image: url("/img/icons/danger.svg") !important; }
 
 /* Optional: slightly smaller pill on narrow screens */
