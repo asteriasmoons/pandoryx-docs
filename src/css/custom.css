@@ -181,6 +181,7 @@ table tbody tr:hover {
 
   /* make the text cursive */
   font-family: 'Dancing Script', cursive;
+  font-weight: 500; /* You can switch between 400, 500, 600, 700 */
   font-size: 1.05rem;
   line-height: 1.5;
 }
