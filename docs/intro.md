@@ -10,9 +10,7 @@ Pandoryx Bot was created with a single guiding vision: **to empower Discord comm
 
 <hr className="md-divider-gradient" />
 
-:::danger
-We believe that a strong community thrives on safety, clarity, and creativity. Pandoryx combines powerful features with a user-friendly approach, helping server owners and moderators create spaces that are secure, well-organized, and welcoming.
-:::
+> We believe that a strong community thrives on safety, clarity, and creativity. Pandoryx combines powerful features with a user-friendly approach, helping server owners and moderators create spaces that are secure, well-organized, and welcoming.
 
 <hr className="md-divider-gradient" />
 
