@@ -174,7 +174,7 @@ table tbody tr:hover {
   position: relative;
   border: none;
   border-radius: 9999px;               
-  padding: 1.25rem 1.75rem 1.25rem 2.75rem; /* reduce left padding */
+  padding: 1.25rem 1.75rem 1.25rem 3rem; /* middle ground */
   color: #fff;
   background: linear-gradient(135deg, #63c8ff, #6055f7); 
   box-shadow: 0 8px 22px rgba(0,0,0,0.18);
@@ -210,7 +210,7 @@ table tbody tr:hover {
 .alert::before {
   content: "";
   position: absolute;
-  left: 1.2rem;
+  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   width: 1.4rem;
