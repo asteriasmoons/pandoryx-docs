@@ -174,7 +174,8 @@ table tbody tr:hover {
   position: relative;
   border: none;
   border-radius: 9999px;               
-  padding: 1.25rem 1.75rem 1.25rem 3rem; /* middle ground */
+  padding-top: 1.15rem;  /* was 1rem */
+  padding-bottom: 1rem;  /* keep bottom padding the same */
   color: #fff;
   background: linear-gradient(135deg, #63c8ff, #6055f7); 
   box-shadow: 0 8px 22px rgba(0,0,0,0.18);
