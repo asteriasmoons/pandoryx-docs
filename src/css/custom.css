@@ -295,3 +295,13 @@ blockquote {
 blockquote p {
   margin: 0;
 }
+
+/* === Banner Images === */
+.doc-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  margin-bottom: 1rem;
+}
