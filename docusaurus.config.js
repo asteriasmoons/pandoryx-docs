@@ -65,6 +65,9 @@ const config = {
             position: "left",
             label: "Docs",
           },
+          {
+            to: "/announcements", label: "Updates", position: "left"
+          },
           // Removed Blog
           // Removed GitHub Pages–specific stuff; keep GitHub link if you want
           // { href: 'https://github.com/your/repo', label: 'GitHub', position: 'right' },
