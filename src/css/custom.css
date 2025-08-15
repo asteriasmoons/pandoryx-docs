@@ -181,7 +181,7 @@ table tbody tr:hover {
 
   /* make the text cursive */
   font-family: 'Edu NSW ACT Hand', cursive;
-  font-weight: 600; /* You can switch between 400, 500, 600, 700 */
+  font-weight: 500; /* You can switch between 400, 500, 600, 700 */
   letter-spacing: 0.3px; /* Helps readability */
   font-size: 1.05rem;
   line-height: 1.5;
