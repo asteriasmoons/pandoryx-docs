@@ -285,7 +285,7 @@ blockquote {
   
   /* gradient border */
   border-left: 6px solid transparent;
-  border-image: linear-gradient(180deg, #63c8ff, #6055f7) 1;
+  border-image: linear-gradient(180deg, #ff8c42, #ff43e9, #6055f7) 1;
   
   /* rounded, frosted background */
   border-radius: 1rem;
