@@ -126,7 +126,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    #63c8ff, /* light blue */
+    #ff8c42, /* light blue */
     #ff43e9, /* pink */
     #6055f7, /* purple */
     transparent
@@ -187,8 +187,8 @@ table tbody tr:hover {
   padding-left: calc(var(--icon-left) + var(--icon-size) + var(--icon-gap));
   color: #fff;
   background: linear-gradient(
-    135deg, 
-    #63c8ff,
+    135deg,
+    #ff8c42,
     #ff43e9,
     #6055f7
    ); 
