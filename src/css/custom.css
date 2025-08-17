@@ -200,7 +200,12 @@ table tbody tr:hover {
   padding-right: 1.75rem;
   padding-left: calc(var(--icon-left) + var(--icon-size) + var(--icon-gap));
   color: #fff;
-  background: linear-gradient(135deg, #63c8ff, #6055f7); 
+  background: linear-gradient(
+    135deg, 
+    #63c8ff,
+    #ff43e9,
+    #6055f7
+   ); 
   box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 
   /* make the text cursive */
