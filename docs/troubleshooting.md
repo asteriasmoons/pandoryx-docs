@@ -52,4 +52,4 @@ Instead, comment on the pinned Bug Reports thread in the Issues tab. The more de
 <hr className="md-divider-gradient" />
 
 ### 💬 Still Stuck?
-[Join the Elyxia Bots Support Server](https://discord.gg/jS5eTjhK7R) and someone will be happy to help!
+[**Join the Elyxia Bots Support Server**](https://discord.gg/jS5eTjhK7R) and someone will be happy to help!
