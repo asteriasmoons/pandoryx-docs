@@ -126,20 +126,6 @@
   background: linear-gradient(
     90deg,
     transparent,
-    #63c8ff, /* blue */
-    #6055f7, /* purple */
-    transparent
-  );
-}
-
-.md-divider-gradient-alt {
-  border: 0;
-  height: 3px;
-  margin: 2rem 0;
-  border-radius: 9999px;
-  background: linear-gradient(
-    90deg,
-    transparent,
     #63c8ff, /* light blue */
     #ff43e9, /* pink */
     #6055f7, /* purple */
