@@ -314,3 +314,8 @@ blockquote p {
   box-shadow: 0 6px 20px rgba(0,0,0,0.18);
   margin-bottom: 1rem;
 }
+
+/* Hide footer only on docs pages */
+.docs-wrapper footer.footer {
+  display: none;
+}
