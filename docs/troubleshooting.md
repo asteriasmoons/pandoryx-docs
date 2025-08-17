@@ -26,7 +26,7 @@ If the command targets another user or role, make sure Pandoryx’s role is abov
 <hr className="md-divider-gradient" />
 
 ### 🎟️ Tickets Aren’t Opening
-- Did you run /ticketpanel create in a channel where the bot has:
+- Did you run `/ticketpanel create` in a channel where the bot has:
   - Manage Channels
   - Create Public/Private Threads (if applicable)
 - Make sure the panel message wasn't accidentally deleted or overwritten.
@@ -38,7 +38,7 @@ If something seems broken or isn't working the way it should, please help us hel
 
 ✅ What to include in your comment:
 - A clear description of the bug
-- What command you used (e.g., /warn, /embed create, etc.)
+- What command you used (e.g., `/warn`, `/embed create`, etc.)
 - What happened vs. what you expected to happen
 - Steps to reproduce it.
 - Any error messages shown by the bot (copy/paste if applicable)
