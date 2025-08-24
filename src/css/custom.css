@@ -179,11 +179,10 @@ table tbody tr:hover {
 }
 
 /* ===========================
-   Pandoryx Callouts (global)
+   Elysium Callouts (global)
    =========================== */
-
-/* Base: pill, gradient, white text */
-.alert {
+   /* Base: pill, gradient, white text */
+.alert:not(details) {
   --icon-size: 1.4rem;   /* matches your ::before width/height */
   --icon-left: 1rem;     /* how far from the pill’s edge */
   --icon-gap: 0.6rem;    /* space between icon and text */
@@ -206,16 +205,17 @@ table tbody tr:hover {
 
   /* make the text cursive */
   font-family: 'Delius', cursive;
-  font-weight: 500; /* You can switch between 400, 500, 600, 700 */
-  letter-spacing: 0.3px; /* Helps readability */
+  font-weight: 500;
+  letter-spacing: 0.3px;
   font-size: 1.05rem;
   line-height: 1.5;
 }
 
 /* Make sure text stays readable */
-.alert a { color: #fff; text-decoration: underline; }
-.alert strong, .alert b { color: #fff; }
-.alert code {
+.alert:not(details) a { color: #fff; text-decoration: underline; }
+.alert:not(details) strong, 
+.alert:not(details) b { color: #fff; }
+.alert:not(details) code {
   background: rgba(255,255,255,0.14);
   color: #fff;
   border: none;
@@ -224,18 +224,17 @@ table tbody tr:hover {
 /* Hide the default admonition icon across theme versions */
 .admonition .admonitionIcon,
 .admonition [class*="admonitionIcon"],
-.alert .admonitionIcon,
-.alert [class*="admonitionIcon"],
-.alert__icon,
-[class*="alert__icon"] {
+.alert:not(details) .admonitionIcon,
+.alert:not(details) [class*="admonitionIcon"],
+.alert:not(details) .alert__icon,
+.alert:not(details) [class*="alert__icon"] {
   display: none !important;
 }
 
 /* Our custom icon slot */
-.alert::before {
+.alert:not(details)::before {
   content: "";
   position: absolute;
-  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   width: var(--icon-size);
@@ -247,44 +246,71 @@ table tbody tr:hover {
 }
 
 /* Use higher specificity + !important to beat theme */
-.alert.alert--success::before       { background-image: url("/img/icons/tip.svg") !important; }
-.alert.alert--secondary::before      { background-image: url("/img/icons/note.svg") !important; }
-.alert.alert--info::before { background-image: url("/img/icons/important.svg") !important; }
-.alert.alert--warning::before   { background-image: url("/img/icons/caution.svg") !important; }
-.alert.alert--danger::before    { background-image: url("/img/icons/danger.svg") !important; }
+.alert:not(details).alert--success::before   { background-image: url("/img/icons/tip.svg") !important; }
+.alert:not(details).alert--secondary::before { background-image: url("/img/icons/note.svg") !important; }
+.alert:not(details).alert--info::before      { background-image: url("/img/icons/important.svg") !important; }
+.alert:not(details).alert--warning::before   { background-image: url("/img/icons/caution.svg") !important; }
+.alert:not(details).alert--danger::before    { background-image: url("/img/icons/danger.svg") !important; }
 
 /* Optional: slightly smaller pill on narrow screens */
 @media (max-width: 600px) {
-  .alert {
+  .alert:not(details) {
     border-radius: 1.25rem;
     padding-left: 3rem;
   }
 }
 
 /* Tighter layout for multi-line callouts */
-.alert {
+.alert:not(details) {
   line-height: 1.35;
 }
 
 /* Hover subtle lift */
-.alert:hover {
+.alert:not(details):hover {
   box-shadow: 0 10px 26px rgba(0,0,0,0.22);
 }
 
 /* Hide admonition headings across theme variants */
 .admonition .admonitionHeading,
 .admonition [class*="admonitionHeading"],
-.alert .admonitionHeading,
-.alert [class*="admonitionHeading"],
-.alert__heading,
-[class*="alert__heading"] {
+.alert:not(details) .admonitionHeading,
+.alert:not(details) [class*="admonitionHeading"],
+.alert:not(details) .alert__heading,
+.alert:not(details) [class*="alert__heading"] {
   display: none !important;
 }
 
 /* Optional: tighten top padding now that the heading is gone */
 .admonition,
-.alert {
+.alert:not(details) {
   padding-top: 0.85rem;
+}
+
+/* RESET for <details> so they don't pick up .alert styling */
+details.alert {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+  padding: 0.75rem 1rem !important;
+}
+details.alert::before { display: none !important; 
+}
+/* Docusaurus details divider override */
+.details_b_E {
+  border: none !important;
+}
+
+/* remove Docusaurus' default summary divider/line, regardless of hashed class */
+details > summary[class*="details_"],
+details > summary[class^="details_"] {
+  border: 0 !important;
+}
+
+/* also neutralize the color var Docusaurus uses for the divider */
+details,
+details[open] {
+  --docusaurus-details-decoration-color: transparent !important;
+  --ifm-alert-border-color: transparent !important; /* belt & suspenders */
 }
 
 /* ==== FROSTED GRADIENT BLOCKQUOTES ==== */
@@ -328,4 +354,159 @@ blockquote p {
 /* Hide footer only on docs pages */
 .docs-wrapper footer.footer {
   display: none;
+}
+
+/* Keep details neutral */
+details {
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: .5rem .75rem;
+  margin: 1rem 0;
+  box-shadow: none;
+}
+
+/* BASE summary row (one rule only) */
+details > summary {
+  /* layout */
+  display: flex;              /* put icon + text on one line */
+  align-items: center;
+  gap: 0.5rem;
+  /* behavior/typography */
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.25rem 0;
+  line-height: 1.4;
+  list-style: none;           /* hide default marker */
+}
+
+/* hide the native marker */
+details > summary::-webkit-details-marker,
+details > summary::marker { display: none; }
+
+/* summary as a single row */
+details > summary {
+  display: flex;
+  align-items: center;
+  gap: .5rem;           /* space between icon and text */
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
+  padding: .25rem 0;
+  line-height: 1.4;
+}
+
+/* gradient divider when open (keep your existing look) */
+details[open] > summary {
+  position: relative;
+  padding-bottom: .6rem;
+  margin-bottom: .75rem;
+}
+details[open] > summary::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 3px; border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, #ff8c42, #ff43e9, #6055f7, transparent);
+}
+
+/* the SVG icon block (uses your file) */
+.details-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 1rem;              /* never shrink, keeps row tidy */
+  -webkit-mask: url("/img/icon.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("/img/icon.svg") no-repeat center;
+  mask-size: contain;
+  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
+  transition: transform .2s ease;
+}
+
+/* rotate when open */
+details[open] > summary .details-icon { transform: rotate(90deg); }
+
+/* Safety: prevent any pill styles from leaking in */
+details, details * { box-shadow: none; background-image: none; }
+
+/* ====== START NAV BUTTONS CSS ====== */ 
+/* Scope to your wrapper hook to avoid side effects */
+.pg-gradient .pagination-nav__link {
+  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+/* Make labels/chevrons white too */
+.pg-gradient .pagination-nav__label,
+.pg-gradient .pagination-nav__sublabel {
+  color: #fff;
+}
+
+/* Hover / focus */
+.pg-gradient .pagination-nav__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  filter: brightness(1.05);
+}
+.pg-gradient .pagination-nav__link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.55); /* orange halo */
+}
+
+/* Subtle layout polish (optional) */
+.pg-gradient .pagination-nav__item--next .pagination-nav__link,
+.pg-gradient .pagination-nav__item--prev .pagination-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* If theme applies borders, neutralize them here */
+.pg-gradient .pagination-nav__link {
+  --ifm-link-color: #fff;
+  --ifm-pagination-nav-border-color: transparent;
+  border-color: transparent;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pg-gradient .pagination-nav__link {
+    transition: none;
+  }
+}
+
+/* Continuous flowing gradient for paginator buttons */
+.pg-gradient .pagination-nav__link {
+  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
+  background-size: 300% auto;   /* wider than button */
+  background-position: 0% center;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  animation: gradientFlow 3s ease infinite;  /* run forever */
+  transition: transform 0.15s ease, box-shadow 0.15s linear;
+}
+
+/* Hover still gives a lift effect */
+.pg-gradient .pagination-nav__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  text-decoration: none;
+}
+
+/* Keyframes for the flowing effect */
+@keyframes gradientFlow {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
 }
