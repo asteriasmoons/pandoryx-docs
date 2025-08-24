@@ -66,11 +66,15 @@ const config = {
             label: "Docs",
           },
           {
-            to: "/announcements", label: "Updates", position: "left"
+            to: "/announcements",
+            label: "Updates",
+            position: "left",
           },
           // Removed Blog
           // Removed GitHub Pages–specific stuff; keep GitHub link if you want
           // { href: 'https://github.com/your/repo', label: 'GitHub', position: 'right' },
+          // 👇 add this
+          { type: "theme", position: "right", className: "theme-toggle" },
         ],
       },
 
