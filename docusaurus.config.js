@@ -51,6 +51,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/social-card.jpg",
+      // 👇 add this block
+      colorMode: {
+        defaultMode: "light", // or 'dark'
+        disableSwitch: false, // ensures toggle is visible
+        respectPrefersColorScheme: true, // (optional) follows OS setting
+      },
+      
       navbar: {
         title: "Pandoryx",
         logo: {
@@ -73,8 +80,6 @@ const config = {
           // Removed Blog
           // Removed GitHub Pages–specific stuff; keep GitHub link if you want
           // { href: 'https://github.com/your/repo', label: 'GitHub', position: 'right' },
-          // 👇 add this
-          { type: "theme", position: "right", className: "theme-toggle" },
         ],
       },
 
