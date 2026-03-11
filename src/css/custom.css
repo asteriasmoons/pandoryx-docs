@@ -533,3 +533,11 @@ details, details * { box-shadow: none; background-image: none; }
 
 /* in src/css/custom.css */
 .giscus-wrap { margin-top: 2rem; }
+
+/* Prevent mobile sidebar overlay from blocking the sidebar on desktop zoom */
+@media (min-width: 997px) {
+  .navbar-sidebar__backdrop {
+    display: none !important;
+    pointer-events: none !important;
+  }
+}
